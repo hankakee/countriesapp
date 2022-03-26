@@ -1,0 +1,53 @@
+.card {
+  position: relative;
+  height: 13em;
+  width: 160px;
+  border-radius: 1px;
+  transition: 0.3s;
+  // margin-top: 8em;
+
+  .kmodal{
+    position: absolute;
+    width: 40em;
+    height: 10em;
+    background-color: rgb(22, 0, 119);
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    cursor:pointer;
+    transform: scale(1.2);
+    z-index: 2;
+  }
+
+  &:hover .infos {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    color: $white;
+    height: 50%;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: 0.3s;
+  }
+  img {
+    height: 100px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
